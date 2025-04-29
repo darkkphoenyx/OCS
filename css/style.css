@@ -1,0 +1,191 @@
+:root {
+  --primary: #f85903;
+  --secondary: #56ccf2;
+  --btn-primary: #f85903;
+  --btn-secondary: rgb(223, 7, 0);
+  --bg: #f2f2f2;
+  --card-bg: #ffffff;
+  --card-border: #f0f0f0;
+  --text-primary: #003266;
+  --text-secondary: #ff4500;
+  --success: #27ae60;
+  --danger: #eb5757;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: var(--text-primary);
+  text-align: center;
+  flex-direction: column;
+  background-color: black;
+  background: url("/OCS/image/OCS-background.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#navbar {
+  background-color: transparent;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar-elements {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+#navbar-elements a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: all 0.1s ease;
+}
+
+#navbar-elements a:hover {
+  color: var(--primary);
+}
+
+#navbar-elements a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+#navbar-elements a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary);
+}
+
+#footer {
+  background-color: var(--primary);
+  padding: 1rem 0;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+.btn1 {
+  border: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn2 {
+  border: 1px solid var(--btn-primary);
+  background-color: var(--btn-primary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn2:hover {
+  background-color: var(--btn-secondary);
+  border-color: var(--btn-secondary);
+}
+
+.btn2:active {
+  transform: translateY(2px);
+}
+
+.card {
+  display: flex;
+  height: auto;
+  max-height: fit-content;
+  flex-direction: column;
+  align-items: start;
+  padding: 1rem 2rem;
+  padding-top: 3rem;
+  gap: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 12px rgba(0, 110, 255, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+#homepage {
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  gap: 2rem;
+}
+
+.home-left,
+.home-right {
+  flex-basis: 50%;
+}
+
+#home-left-header {
+  font-size: 90px;
+  text-align: start;
+}
+
+
+
+#product-index {
+  #p-header {
+    color: var(--btn-secondary);
+  }
+  ul {
+    list-style: decimal;
+    padding-left: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  .product-table th,
+  .product-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .product-table th {
+    background-color: var(--primary);
+    color: #fff;
+  }
+}
+
+#complaint-form {
+  gap: 0;
+}
