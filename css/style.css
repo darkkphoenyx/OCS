@@ -45,12 +45,17 @@ body {
   display: flex;
   align-items: center;
   gap: 10rem;
+
+  h1{
+    font-size: 2.5rem;
+    color: var(--btn-primary)
+  }
 }
 
 #navbar-elements a {
   text-decoration: none;
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   padding-bottom: 4px;
   transition: all 0.1s ease;
@@ -81,6 +86,7 @@ body {
   width: 100%;
   position: relative;
   margin-top: auto;
+  color: white;
 }
 
 .btn1 {
@@ -130,26 +136,65 @@ body {
   transition: box-shadow 0.3s ease;
 }
 
-#homepage {
-  padding: 1rem 3rem;
+.container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 4rem;
-  gap: 2rem;
+  flex-direction: column;
+  padding: 0 3rem;
+
+  #homepage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .home-left,
+    .home-right {
+      flex-basis: 50%;
+    }
+
+    #home-left-header {
+      font-size: 90px;
+      text-align: start;
+      line-height: 6.5rem;
+    }
+
+    #paragraph{
+      margin-top: 3rem;
+      font-size: 1.8rem;
+      text-align: start;
+    }
+  }
+
+  #buttom {
+    margin-top: 7rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .linker{
+    margin-top: 2rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: #00bbff;
+    font-weight: 500;
+    cursor:pointer;
+
+    #middle{
+      margin: 0 1rem;
+      padding: 0 1rem;
+      border-left: 2px solid rgb(224, 224, 224);
+      border-right: 2px solid rgb(224, 224, 224);
+    }
+  }
 }
-
-.home-left,
-.home-right {
-  flex-basis: 50%;
-}
-
-#home-left-header {
-  font-size: 90px;
-  text-align: start;
-}
-
-
 
 #product-index {
   #p-header {
