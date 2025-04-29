@@ -13,10 +13,12 @@ include 'includes/header.php';
             <p id="paragraph">The only place where your complaints are precious to us! If you have a complaint about any product, you're in the right place.</p>
         </div>
         <div class="home-right">
-            <img height="500px" src="/OCS/image/ocs-image1.png" alt="OCS image 1">
+            <img id="image" src="/OCS/image/ocs-image1.png" alt="OCS image 1">
         </div>
     </div>
-    <a href="/OCS/complaint.php" id="homeToComplaint" class="btn2" style="text-decoration: none; align-self: start;">Register Complaint</a>
+    <div id="homeToComplaint">
+        <a href="/OCS/complaint.php" class="btn2" style="text-decoration: none; align-self: start;">Register Complaint</a>
+    </div>
 
     <div id="buttom">
         <h2>Top Products</h2>

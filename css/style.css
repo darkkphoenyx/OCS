@@ -45,15 +45,25 @@ body {
   display: flex;
   align-items: center;
   gap: 10rem;
+}
 
-  h1{
-    font-size: 2.5rem;
-    color: var(--btn-primary)
-  }
+.icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--primary);
+}
+#hamburger-icon {
+  height: 32px;
+}
+
+#navbar-elements .icon {
+  font-size: 2.5rem;
+  color: var(--btn-primary);
 }
 
 #navbar-elements a {
   text-decoration: none;
+  list-style: none;
   color: var(--text-primary);
   font-weight: 600;
   position: relative;
@@ -78,6 +88,63 @@ body {
   height: 2px;
   width: 100%;
   background-color: var(--primary);
+}
+
+.login {
+  justify-self: end;
+}
+
+#mobile {
+  display: none;
+}
+
+#mobile h1 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+#mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  position: absolute;
+  top: 60px;
+}
+
+#mobile-nav a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 4px;
+  transition: all 0.1s ease;
+}
+
+#mobile-nav a:hover {
+  color: var(--primary);
+}
+
+#mobile-nav a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+#mobile-nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary);
+}
+
+#mobile-nav.show {
+  display: flex;
+  width: 100%;
 }
 
 #footer {
@@ -122,12 +189,9 @@ body {
 
 .card {
   display: flex;
-  height: auto;
-  max-height: fit-content;
   flex-direction: column;
   align-items: start;
-  padding: 1rem 2rem;
-  padding-top: 3rem;
+  padding: 3rem 2rem 1rem;
   gap: 1rem;
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -140,97 +204,187 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 3rem;
-
-  #homepage {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-
-    .home-left,
-    .home-right {
-      flex-basis: 50%;
-    }
-
-    #home-left-header {
-      font-size: 90px;
-      text-align: start;
-      line-height: 6.5rem;
-    }
-
-    #paragraph{
-      margin-top: 3rem;
-      font-size: 1.8rem;
-      text-align: start;
-    }
-  }
-
-  #buttom {
-    margin-top: 7rem;
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    p {
-      margin-top: 1rem;
-      font-weight: 500;
-    }
-  }
-
-  .linker{
-    margin-top: 2rem;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color: #00bbff;
-    font-weight: 500;
-    cursor:pointer;
-
-    #middle{
-      margin: 0 1rem;
-      padding: 0 1rem;
-      border-left: 2px solid rgb(224, 224, 224);
-      border-right: 2px solid rgb(224, 224, 224);
-    }
-  }
 }
 
-#product-index {
-  #p-header {
-    color: var(--btn-secondary);
-  }
-  ul {
-    list-style: decimal;
-    padding-left: 1rem;
-  }
+#homepage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-  a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: white;
-  }
+.home-left,
+.home-right {
+  flex-basis: 50%;
+}
 
-  .product-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  .product-table th,
-  .product-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
+#home-left-header {
+  font-size: 90px;
+  text-align: start;
+  line-height: 6.5rem;
+}
 
-  .product-table th {
-    background-color: var(--primary);
-    color: #fff;
-  }
+#paragraph {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  text-align: start;
+}
+
+#homeToComplaint {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+#image {
+  height: 500px;
+}
+
+#buttom {
+  margin-top: 7rem;
+}
+
+#buttom h2 {
+  font-size: 2rem;
+}
+
+#buttom p {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.linker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00bbff;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 2rem 0 !important;
+}
+
+#middle {
+  margin: 0 1rem;
+  padding: 0 1rem;
+  border-left: 2px solid rgb(224, 224, 224);
+  border-right: 2px solid rgb(224, 224, 224);
+}
+
+#product-index #p-header {
+  color: var(--btn-secondary);
+}
+
+#product-index ul {
+  list-style: decimal;
+  padding-left: 1rem;
+}
+
+#product-index a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: var(--primary);
+  color: #fff;
 }
 
 #complaint-form {
   gap: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1240px) {
+  #navbar {
+    padding: 1rem 3rem;
+  }
+  #navbar-elements {
+    gap: 2.5rem !important;
+  }
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+  #home-left-header {
+    font-size: 3rem !important;
+    line-height: 2.5rem !important;
+  }
+  #image {
+    height: 350px !important;
+  }
+  .linker {
+    margin: 1.7rem 0 !important;
+  }
+}
+
+@media screen and (max-width: 911px) {
+  #hamburger-icon {
+    display: absolute;
+  }
+  #navbar {
+    padding: 1rem 1rem;
+  }
+  #navbar-elements {
+    display: none;
+    cursor: pointer;
+  }
+  .login {
+    display: none;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+  #homepage {
+    flex-direction: column;
+    align-items: center;
+  }
+  #home-left-header {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+    text-align: center;
+  }
+  #paragraph {
+    margin-top: 1.9rem !important;
+    font-size: 1rem !important;
+  }
+  #image {
+    height: 230px !important;
+  }
+  #homeToComplaint {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem !important;
+  }
+  #buttom {
+    margin-top: 4rem !important;
+  }
+  .linker {
+    font-size: 0.7rem !important;
+    margin: 1.7rem 0 !important;
+  }
+  #footer {
+    font-size: 0.9rem !important;
+  }
 }
