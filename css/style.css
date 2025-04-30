@@ -49,8 +49,10 @@ body {
 
 .icon {
   font-size: 2.5rem;
+  font-weight: 700;
   cursor: pointer;
   color: var(--primary);
+  text-decoration: none;
 }
 #hamburger-icon {
   height: 32px;
@@ -167,6 +169,10 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+.btn1:hover {
+  scale: 1.05;
+}
+
 .btn2 {
   border: 1px solid var(--btn-primary);
   background-color: var(--btn-primary);
@@ -182,6 +188,7 @@ body {
 .btn2:hover {
   background-color: var(--btn-secondary);
   border-color: var(--btn-secondary);
+  scale: 1.05;
 }
 
 .btn2:active {
@@ -390,8 +397,8 @@ body {
 }
 
 .product-card img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  height: 90%;
   object-fit: cover;
   z-index: 1;
 }
@@ -425,8 +432,11 @@ body {
     justify-content: center;
   }
   #home-left-header {
-    font-size: 3rem !important;
-    line-height: 2.5rem !important;
+    font-size: 4rem !important;
+    line-height: 4rem !important;
+  }
+  #paragraph {
+    font-size: 1.2rem !important;
   }
   #image {
     height: 350px !important;
@@ -500,9 +510,10 @@ body {
   #paragraph {
     margin-top: 1.9rem !important;
     font-size: 1rem !important;
+    text-align: center;
   }
   #image {
-    height: 230px !important;
+    height: 200px !important;
   }
   #homeToComplaint {
     align-self: center;

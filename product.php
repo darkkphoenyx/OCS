@@ -5,7 +5,6 @@ include 'includes/header.php';
 $query = "SELECT * FROM products";
 $result = mysqli_query($conn, $query);
 
-// Array of local image paths
 $imageLinks = [
     "/OCS/image/image1.png",
     "/OCS/image/image2.png",
@@ -17,12 +16,14 @@ $imageLinks = [
     "/OCS/image/image8.png",
     "/OCS/image/image9.png",
     "/OCS/image/image10.png",
+    "/OCS/image/image11.png",
+    "/OCS/image/image12.png",
+    "/OCS/image/image13.png",
 ];
 ?>
 
-<!-- Container -->
 <div id="product-index">
-    <h2 id="p-header">Product List</h2>
+    <h2 id="p-header"><span style="color: var(--text-primary)">Product&nbsp</span>List</h2>
     <p class="paragraph">Explore a diverse range of premium products — thoughtfully selected to bring quality and value to your life.</p>
 
     <div class="product-grid">

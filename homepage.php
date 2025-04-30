@@ -17,7 +17,7 @@ include 'includes/header.php';
         </div>
     </div>
     <div id="homeToComplaint">
-        <a href="/OCS/complaint.php" class="btn2" style="text-decoration: none; align-self: start;">Register Complaint</a>
+        <a href="/OCS/product.php" class="btn2" style="text-decoration: none; align-self: start;">Register Complaint</a>
     </div>
 
     <div id="buttom">

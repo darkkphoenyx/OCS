@@ -1,4 +1,6 @@
 <?php include 'includes/header.php'; ?>
+<h2 id="p-header"><span style="color: var(--text-primary)">File&nbsp</span>Complaint</h2>
+<p class="paragraph">Please share the details of your complaint below. Once submitted, we’ll take care of it promptly and keep you updated.</p>
 <div id="complaint">
     <form id="complaint-form" class="card" method="POST" action="submit_complaint.php">
         <label>Name:</label><input type="text" name="name" placeholder="John Doe" required><br>
@@ -37,8 +39,8 @@
 
     const updateCountAndResize = () => {
         charCount.textContent = `${textarea.value.length} / ${maxLength}`;
-        textarea.style.height = "auto"; // reset height
-        textarea.style.height = textarea.scrollHeight + "px"; // grow to content
+        textarea.style.height = "auto";
+        textarea.style.height = textarea.scrollHeight + "px";
     };
 
     textarea.addEventListener('input', updateCountAndResize);

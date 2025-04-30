@@ -15,7 +15,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 <body>
 
     <nav id="navbar">
-        <h1 class="icon">OCS</h1>
+        <a class="icon" href="/OCS/homepage.php">OCS</a>
         <div id="navbar-elements">
             <a href="/OCS/homepage.php" class="<?php echo ($currentPage === 'homepage.php') ? 'active' : ''; ?>">Home</a>
             <a href="/OCS/product.php" class="<?php echo ($currentPage === 'product.php') ? 'active' : ''; ?>">Products</a>
