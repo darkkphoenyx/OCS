@@ -27,7 +27,6 @@ body {
   color: var(--text-primary);
   text-align: center;
   flex-direction: column;
-  background-color: black;
   background: url("/OCS/image/OCS-background.png") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -404,7 +403,7 @@ body {
 }
 
 .product-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding: 0 0.5rem;
   margin: 1rem 0 0.1rem 0;
 }
@@ -417,6 +416,31 @@ body {
 .product-card .btn2 {
   margin-top: 0.7rem;
   display: inline-block;
+}
+
+.success-message {
+  position: absolute;
+  right: 10;
+  bottom: 0;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  margin: 15px 0;
+  border-radius: 4px;
+  animation: slideIn 0.5s ease-out;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Media Queries */

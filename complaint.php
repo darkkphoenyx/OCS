@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/navbar.php'; ?>
 <h2 id="p-header"><span style="color: var(--text-primary)">File&nbsp</span>Complaint</h2>
 <p class="paragraph">Please share the details of your complaint below. Once submitted, we’ll take care of it promptly and keep you updated.</p>
 <div id="complaint">

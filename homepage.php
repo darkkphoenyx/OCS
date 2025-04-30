@@ -1,6 +1,6 @@
 <?php
 include 'includes/db.php';
-include 'includes/header.php';
+include 'includes/navbar.php';
 ?>
 
 <div class="container">
@@ -31,5 +31,10 @@ include 'includes/header.php';
         <p>Most resolved complaints</p>
     </div>
 </div>
+
+<?php
+echo password_hash('admin123', PASSWORD_DEFAULT);
+echo "<br>"
+?>
 
 <?php include 'includes/footer.php'; ?>

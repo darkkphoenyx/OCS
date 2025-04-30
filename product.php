@@ -1,6 +1,18 @@
+<?php if (isset($_GET['updated']) && $_GET['updated'] == 1): ?>
+    <div class="success-message" id="successMessage">Complaint submitted successfully!</div>
+    <script>
+        setTimeout(function() {
+            const msg = document.getElementById('successMessage');
+            if (msg) {
+                msg.style.display = 'none';
+            }
+        }, 3500);
+    </script>
+<?php endif; ?>
+
 <?php
 include 'includes/db.php';
-include 'includes/header.php';
+include 'includes/navbar.php';
 
 $query = "SELECT * FROM products";
 $result = mysqli_query($conn, $query);

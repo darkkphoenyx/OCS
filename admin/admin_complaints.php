@@ -1,6 +1,6 @@
 <?php
 include '../includes/db.php';
-include '../includes/header.php';
+include '../admin/admin_navbar.php';
 $query = "SELECT complaints.*, products.name AS product_name 
           FROM complaints JOIN products ON complaints.product_id = products.id";
 $result = mysqli_query($conn, $query);

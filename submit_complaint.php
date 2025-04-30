@@ -8,5 +8,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = "INSERT INTO complaints (product_id, user_name, user_email, message)
               VALUES ('$product_id', '$name', '$email', '$message')";
     mysqli_query($conn, $query);
-    header("Location: product.php");
+    header("Location: product.php?updated=1");
 }
