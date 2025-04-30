@@ -18,7 +18,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <h1 class="icon">OCS</h1>
         <div id="navbar-elements">
             <a href="/OCS/homepage.php" class="<?php echo ($currentPage === 'homepage.php') ? 'active' : ''; ?>">Home</a>
-            <a href="/OCS/index.php" class="<?php echo ($currentPage === 'index.php') ? 'active' : ''; ?>">Products</a>
+            <a href="/OCS/product.php" class="<?php echo ($currentPage === 'product.php') ? 'active' : ''; ?>">Products</a>
             <a href="/OCS/complaint.php" class="<?php echo ($currentPage === 'complaint.php') ? 'active' : ''; ?>">Complaints</a>
             <a href="/OCS/faqs.php#faq" class="<?php echo ($currentPage === 'faqs.php') ? 'active' : ''; ?>">FAQ's</a>
             <div class="login">
@@ -34,7 +34,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <!-- Mobile Nav Links -->
     <div id="mobile-nav">
         <a href="/OCS/homepage.php" class="<?php echo ($currentPage === 'homepage.php') ? 'active' : ''; ?>">Home</a>
-        <a href="/OCS/index.php" class="<?php echo ($currentPage === 'index.php') ? 'active' : ''; ?>">Products</a>
+        <a href="/OCS/product.php" class="<?php echo ($currentPage === 'product.php') ? 'active' : ''; ?>">Products</a>
         <a href="/OCS/complaint.php" class="<?php echo ($currentPage === 'complaint.php') ? 'active' : ''; ?>">Complaints</a>
         <a href="/OCS/faqs.php#faq" class="<?php echo ($currentPage === 'faqs.php') ? 'active' : ''; ?>">FAQ's</a>
     </div>
