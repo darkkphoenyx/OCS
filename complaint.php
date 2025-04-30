@@ -7,12 +7,15 @@
         <select name="product_id" required>
             <?php
             include 'includes/db.php';
+            $selectedId = isset($_GET['product_id']) ? $_GET['product_id'] : '';
             $res = mysqli_query($conn, "SELECT id, name FROM products");
-            echo "<option value='' hidden selected disabled>-Select a product-</option>";
+            echo "<option value='' hidden disabled " . ($selectedId === '' ? "selected" : "") . ">-Select a product-</option>";
             while ($row = mysqli_fetch_assoc($res)) {
-                echo "<option value='{$row['id']}'>{$row['name']}</option>";
+                $selected = ($row['id'] == $selectedId) ? "selected" : "";
+                echo "<option value='{$row['id']}' $selected>{$row['name']}</option>";
             }
             ?>
+
         </select><br>
         <div class="textarea-wrapper">
             <label>Message:</label><br>
@@ -39,8 +42,6 @@
     };
 
     textarea.addEventListener('input', updateCountAndResize);
-
-    // Initial state on load
     window.addEventListener('DOMContentLoaded', updateCountAndResize);
 </script>
 
