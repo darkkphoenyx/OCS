@@ -28,7 +28,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         </div>
         <!-- Mobile Toggle -->
         <div id="mobile">
-            <img id="hamburger-icon" src="/OCS/image/align-right1.png" alt="hamburger" />
+            <img id="hamburger-icon" src="/OCS/image/align-right.png" alt="hamburger" />
         </div>
     </nav>
     <!-- Mobile Nav Links -->
