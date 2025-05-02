@@ -150,8 +150,8 @@ body {
   text-decoration: none;
 }
 .btn:hover {
-  background-color: var(--text-secondary);
-  border-color: var(--text-secondary);
+  background-color: #001e3d;
+  border-color: #001e3d;
   scale: 1.05;
 }
 .btn:active {
@@ -331,7 +331,7 @@ form textarea {
 
   th {
     background-color: var(--primary);
-    color: #fff
+    color: #fff;
   }
 
   tr:nth-child(odd) {

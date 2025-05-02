@@ -20,7 +20,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             <a href="/OCS/homepage.php" class="<?php echo ($currentPage === 'homepage.php') ? 'active' : ''; ?>">Home</a>
             <a href="/OCS/product.php" class="<?php echo ($currentPage === 'product.php') ? 'active' : ''; ?>">Products</a>
             <a href="/OCS/complaint.php" class="<?php echo ($currentPage === 'complaint.php') ? 'active' : ''; ?>">Complaints</a>
-            <a href="/OCS/faqs.php#faq" class="<?php echo ($currentPage === 'faqs.php') ? 'active' : ''; ?>">FAQ's</a>
             <div class="login">
                 <div id="homeToAdmin">
                     <a href="/OCS/admin/admin_login.php" class="btn2" style="color: white;">Login</a>
@@ -37,7 +36,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <a href="/OCS/homepage.php" class="<?php echo ($currentPage === 'homepage.php') ? 'active' : ''; ?>">Home</a>
         <a href="/OCS/product.php" class="<?php echo ($currentPage === 'product.php') ? 'active' : ''; ?>">Products</a>
         <a href="/OCS/complaint.php" class="<?php echo ($currentPage === 'complaint.php') ? 'active' : ''; ?>">Complaints</a>
-        <a href="/OCS/faqs.php#faq" class="<?php echo ($currentPage === 'faqs.php') ? 'active' : ''; ?>">FAQ's</a>
     </div>
 
     <script>

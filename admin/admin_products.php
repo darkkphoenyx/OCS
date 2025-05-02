@@ -29,6 +29,7 @@ $imageLinks = [
     <meta charset="UTF-8">
     <title>Product List</title>
     <link rel="stylesheet" href="/OCS/css/admin_style.css">
+    <link rel="stylesheet" href="/OCS/css/style.css">
 </head>
 
 <body>
@@ -86,6 +87,7 @@ $imageLinks = [
             }
         });
     </script>
+    <?php include '../includes/footer.php' ?>
 </body>
 
 </html>
