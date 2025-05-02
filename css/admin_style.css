@@ -306,3 +306,35 @@ form textarea {
     align-items: start;
   }
 }
+
+.complaints-container {
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    color: var(--text-primary);
+  }
+
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2 8px rgba(0, 0, 0, 0.1);
+  }
+
+  th,
+  td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--primary);
+    color: #fff
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgb(253, 240, 235);
+  }
+}
