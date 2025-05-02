@@ -32,9 +32,9 @@ include 'includes/navbar.php';
     </div>
 </div>
 
-<?php
+<!-- <?php
 echo password_hash('admin123', PASSWORD_DEFAULT);
 echo "<br>"
-?>
+?> -->
 
 <?php include 'includes/footer.php'; ?>

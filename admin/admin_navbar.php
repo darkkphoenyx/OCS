@@ -37,6 +37,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <div class="nav-elements">
             <a href="/OCS/admin/admin_products.php" class="<?php echo ($currentPage === 'admin_products.php') ? 'active' : ''; ?>">Edit Products</a>
             <a href="/OCS/admin/admin_complaints.php" class="<?php echo ($currentPage === 'admin_complaints.php') ? 'active' : ''; ?>">View Complaints</a>
+            <a href="/OCS/admin/add_product.php" class="<?php echo ($currentPage === 'add_product.php') ? 'active' : ''; ?>">Add Products</a>
         </div>
         <div class="logout">
             <div id="homeToAdmin">

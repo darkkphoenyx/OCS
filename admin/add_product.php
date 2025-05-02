@@ -1,6 +1,6 @@
 <?php
 include '../includes/db.php';
-include '../includes/navbar.php';
+include '../admin/admin_navbar.php';
 
 $message = '';
 
@@ -19,27 +19,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<div class="container">
-    <h2>Add New Product</h2>
+<html>
 
-    <?php if ($message): ?>
-        <p style="color: green;"><?php echo $message; ?></p>
-    <?php endif; ?>
+<head>
+    <link rel="stylesheet" href="/OCS/css/admin_style.css">
+    <link rel="stylesheet" href="/OCS/css/style.css">
+    <style>
 
-    <form method="POST" action="">
-        <label>Product Name:</label><br>
-        <input type="text" name="name" required><br><br>
+    </style>
+</head>
 
-        <label>Description:</label><br>
-        <textarea name="description" rows="4" required></textarea><br><br>
+<body>
+    <div class="add-container">
+        <div class="add-form">
 
-        <label>Category:</label><br>
-        <input type="text" name="category" required><br><br>
+            <h2>Add <span style="color:#f85903">New Product</span></h2>
+            <p>Provide all the details for the Product registration.</p>
 
-        <button type="submit">Add Product</button>
-    </form>
+            <?php if ($message): ?>
+                <p style="color: green;"><?php echo $message; ?></p>
+            <?php endif; ?>
 
-    <p><a href="products.php">← Back to Product List</a></p>
-</div>
+            <form method="POST" action="">
+                <label>Product Name:</label><br>
+                <input type="text" name="name" required><br><br>
+
+                <label>Description:</label><br>
+                <textarea name="description" rows="4" required id="autoResize"></textarea><br><br>
+
+                <label>Category:</label><br>
+                <input type="text" name="category" required><br><br>
+
+                <button type="submit" class="btn2" style="background-color:#003266; border-color: #003266;width: 100%">Add Product</button>
+            </form>
+            <br><br>
+            <p><a href="admin_products.php" class="btn2">← Back to Product List</a></p>
+        </div>
+    </div>
+
+    <script>
+        const textarea = document.getElementById('autoResize');
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto'; // Reset height
+            this.style.height = this.scrollHeight + 'px'; // Set new height
+        });
+
+        // Trigger resize on load if there's pre-filled content
+        window.addEventListener('DOMContentLoaded', () => {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        });
+    </script>
+</body>
+
+</html>
 
 <?php include '../includes/footer.php'; ?>

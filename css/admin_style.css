@@ -256,3 +256,53 @@ body {
     transform: translateX(0);
   }
 }
+
+.add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.add-form h2 {
+  font-size: 3rem;
+  color: var(--text-primary);
+}
+
+.add-form {
+  color: var(--text-primary);
+}
+
+form {
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: start;
+}
+
+form label {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+form input {
+  outline: none;
+  width: 100%;
+  padding: 4px;
+}
+
+form textarea {
+  width: 100%;
+  outline: none;
+  padding: 4px;
+  resize: none;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+@media screen and (max-width: 911px) {
+  .add-container {
+    align-items: start;
+  }
+}
