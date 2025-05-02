@@ -24,7 +24,7 @@ OCS is a full-stack web application designed to streamline the process of submit
 - Designed with mobile responsiveness and usability in mind.
 - CSS is modular and scoped separately for the user portal.
 
-## 🔐 Features
+## 🔐 Admin Dashboard Features
 
 ### - Secure Admin Authentication
 
