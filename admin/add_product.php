@@ -4,7 +4,6 @@ include '../admin/admin_navbar.php';
 
 $message = '';
 
-// Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
@@ -12,10 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "INSERT INTO products (name, description, category) VALUES ('$name', '$description', '$category')";
     if (mysqli_query($conn, $query)) {
-        $message = "✅ Product added successfully!";
+        header("Location: " . $_SERVER['PHP_SELF'] . "?success=1");
+        exit;
     } else {
         $message = "❌ Error: " . mysqli_error($conn);
     }
+}
+
+if (isset($_GET['success'])) {
+    $message = "✅ Product added successfully!";
 }
 ?>
 
@@ -37,7 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Provide all the details for the Product registration.</p>
 
             <?php if ($message): ?>
-                <p style="color: green;"><?php echo $message; ?></p>
+                <p id="success-message" class="success-message" style="z-index: 10;"><?php echo $message; ?></p>
+
             <?php endif; ?>
 
             <form method="POST" action="">
@@ -60,14 +65,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script>
         const textarea = document.getElementById('autoResize');
         textarea.addEventListener('input', function() {
-            this.style.height = 'auto'; // Reset height
+            this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px'; // Set new height
         });
 
-        // Trigger resize on load if there's pre-filled content
         window.addEventListener('DOMContentLoaded', () => {
             textarea.style.height = 'auto';
             textarea.style.height = textarea.scrollHeight + 'px';
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const message = document.getElementById("success-message");
+
+            if (window.location.search.includes("success=1")) {
+                const url = new URL(window.location);
+                url.searchParams.delete("success");
+                window.history.replaceState({}, document.title, url.toString());
+            }
+
+            if (message) {
+                setTimeout(() => {
+                    message.style.opacity = "0";
+                    setTimeout(() => message.remove(), 500);
+                }, 4000);
+            }
         });
     </script>
 </body>
