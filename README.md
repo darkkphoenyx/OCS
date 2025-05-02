@@ -47,7 +47,7 @@ OCS is a full-stack web application designed to streamline the process of submit
 
 ## ⚙️ Tech Stack
 
-- Frontend: HTML, CSS (custom with variables for theme)
+- Frontend: HTML, CSS (custom with variables for theme) and JAVASCRIPT
 - Backend: PHP
 - Database: MySQL
 - Session Management: PHP native `$_SESSION`
