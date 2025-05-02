@@ -87,7 +87,7 @@ OCS is a full-stack web application designed to streamline the process of submit
 
 1. Clone the project and place it inside your local server's root directory (e.g., `htdocs` for XAMPP).
 
-2. Import the SQL file (if provided) into your MySQL server to create required tables (`admin`, `products`, `complaints`).
+2. Import the SQL file into your MySQL server to create required tables (`admin`, `products`, `complaints`).
 
 3. Set your database credentials in ` includes/db.php`.
 
